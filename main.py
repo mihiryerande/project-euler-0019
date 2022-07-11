@@ -20,7 +20,7 @@
 MONTH_DAY_COUNTS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 
-def days_in_month(m, y):
+def days_in_month(m: int, y: int) -> int:
     """
     Returns the number of days in month `m`, during year `y`.
 
@@ -41,7 +41,7 @@ def days_in_month(m, y):
     return MONTH_DAY_COUNTS[m] + int(m == 1 and y % 4 == 0 and (y % 100 != 0 or y % 400 == 0))
 
 
-def main():
+def main() -> int:
     """
     Returns the number of Sundays falling on the 1st of the month
       during the 20th century (1 Jan 1901 to 31 Dec 2000).
